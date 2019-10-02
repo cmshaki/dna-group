@@ -1,0 +1,34 @@
+.page-logo {
+    padding-top: 40px;
+    margin-left: 40px;
+    /* position: fixed; */
+    margin-bottom: 40px;
+}
+
+.animate-pop-in-logomark {
+    animation: pop-in-logo 1.2s ease-out forwards;
+}
+
+@keyframes pop-in-logo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.animate-loading-logo {
+    animation: loading-logo 0.8s ease-out forwards;
+}
+
+@keyframes loading-logo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

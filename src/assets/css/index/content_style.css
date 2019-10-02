@@ -1,0 +1,93 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    cursor: none;
+}
+
+body {
+    margin: 30px;
+    background-color: black;
+}
+
+.content-wrapper {
+    padding: 10px;
+}
+
+.content {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+}
+
+#page-content {
+    margin-left: 300px
+}
+
+.svg-logo {
+    margin-top: 150px;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.maintext {
+    margin-top: 8px;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    line-height: 88px;
+    display: inline-flex;
+}
+
+.scripttext {
+    font-size: 20px;
+    font-family: Arial;
+    color: aliceblue;
+    display: inline-flex;
+}
+
+.email-input {
+    display: inline-flex;
+    margin-top: 50px;
+    height: 40px;
+}
+
+.input-text {
+    border-radius: 3px;
+    background: none;
+    box-shadow: none;
+    border: white 1px solid;
+    padding-left: 1px;
+    width: 400px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: none;
+    padding-left: 5px;
+    height: 40px;
+    color: white;
+    cursor: none;
+    font-size: 1.75em;
+}
+
+.input-button {
+    border-radius: 3px;
+    background: none;
+    box-shadow: none;
+    border: white 1px solid;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 80px;
+    color: white;
+    cursor: none;
+    font-size: 18px;
+}
+
+.input-button:hover {
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+    font-size: 20px;
+}

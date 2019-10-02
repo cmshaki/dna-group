@@ -1,0 +1,43 @@
+.animate-pop-in-logo {
+    animation: pop-in-logo 1.2s ease-in both;
+}
+
+.animate-pop-in-logomark {
+    animation: pop-in-logo 1.2s ease-out forwards;
+}
+
+@keyframes pop-in-logo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.animation-maintext1 {
+    animation: enter 1.6s 0.6s ease both;
+}
+
+.animation-maintext2 {
+    animation: enter 1.6s 1.1s ease both;
+}
+
+.animaiton-scripttext {
+    animation: enter 1.6s 1.7s ease both;
+}
+
+.animation-input {
+    animation: enter 1.6s 2.2s ease both;
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

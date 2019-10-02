@@ -1,0 +1,42 @@
+.animate-contact-menu {
+    animation: start-contact-menu 2s ease-in forwards;
+}
+
+@keyframes start-contact-menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px) scale(1.0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-440px) scale(1.0);
+    }
+}
+
+.animate-contact-menu1 {
+    animation: start-contact-menu1 1.5s ease-in forwards;
+}
+
+@keyframes start-contact-menu1 {
+    0% {
+        opacity: 0;
+        transform: translateY(600px) scale(1.0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(500px) scale(1.0);
+    }
+}
+
+.animate-contact-parallax {
+    animation: start-contact-parallax 1s ease-in forwards;
+}
+
+@keyframes start-contact-parallax {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

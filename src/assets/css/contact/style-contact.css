@@ -1,0 +1,308 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    cursor: none;
+    /* height: 100%; */
+}
+
+body {
+    /* background-color: black; */
+    cursor: none;
+    /* position: fixed; */
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    padding: 1px;
+    width: 100%;
+    display: flex;
+    opacity: 1;
+}
+
+a,
+input {
+    background-color: transparent;
+    cursor: none;
+}
+
+.contact-page {
+    /* display: none; */
+}
+
+.content-contact {
+    /* background: black; */
+}
+
+.background-contact {
+    position: fixed;
+}
+
+.img-back {
+    /* margin-left: auto;
+    margin-right: auto; */
+    z-index: -1;
+    width: 100%;
+    min-width: 80%;
+}
+
+.parallax {
+    /* The image used */
+    background: #333 url("../../img/2.jpg") no-repeat center bottom;
+    /* Set a specific height */
+    min-height: 600px;
+    width: 84%;
+    padding-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.contact-info {
+    background-color: black;
+    font-size: 36px;
+    width: 84%;
+    transform: translateY(-540px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+.contact-info1 {
+    background-color: rgb(22, 22, 22);
+    font-size: 36px;
+    width: 78%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    transform: translateY(500px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    z-index: 3;
+}
+
+.contact-title {
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-weight: bold;
+}
+
+.contact-guideline {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contact-schedule {
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+
+.schedule-check {
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    margin: 0 10%;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.schedule-left-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.schedule-right-item {
+    display: none;
+}
+
+.schedule-checkbox {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.schedule-phonenumcall {
+    color: gray;
+}
+
+.input-line {
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+    width: 93%
+}
+
+.input-field {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: gray;
+    width: 45%;
+}
+
+.field-name {
+    font-size: 20px;
+    opacity: 0.5;
+    width: 23%;
+    border-bottom: 1px solid;
+}
+
+.field-text {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: gray;
+}
+
+.input-field-message {
+    margin-top: 40px;
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+.contact-message {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 20px;
+    width: 88%;
+}
+
+.field-name-message {
+    font-size: 20px;
+    opacity: 0.5;
+    border-bottom: 1px solid;
+    width: 13%
+}
+
+.field-text-message1 {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    width: 100%;
+    border-color: gray;
+}
+
+.field-text-message {
+    padding-bottom: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    width: 100%;
+    border-color: gray;
+}
+
+.contact-submitt {
+    margin-top: 80px;
+    background: transparent;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: rgba(71, 71, 71, 1.0);
+    border-color: white;
+    border-style: double;
+    font-size: 20px
+}
+
+.contact-submitt:hover {
+    background: rgb(55, 55, 55);
+}
+
+.contact-footer {
+    margin-top: -320px;
+    padding: 1px;
+}
+
+.contact-footer1 {
+    margin-top: 550px;
+    padding: 1px;
+    z-index: 2;
+}
+
+.footer-logo {
+    margin-left: 5%;
+}
+
+.footer-item-dash {
+    width: 90%;
+    border-bottom: 1px solid;
+    height: 0px;
+    flex: 0 0 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: gray;
+}
+
+.footer-guide {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 89%;
+    font-size: 20px;
+    color: gray;
+}
+
+.footer-left {
+    /* margin-right: 60%; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer-link {
+    color: white;
+    display: inline;
+}
