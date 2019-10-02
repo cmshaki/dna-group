@@ -1,0 +1,17 @@
+.cursor {
+  position: absolute;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: red;
+}
+
+.cursor2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f5f5f5;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}

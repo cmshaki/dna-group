@@ -8,7 +8,8 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: "./src/index.js"
+    index: "./src/index.js",
+    mission: "./src/mission/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -19,6 +20,15 @@ module.exports = {
       {
         test: /\.html$/,
         use: [{ loader: "html-loader", options: { minimize: true } }]
+      },
+      {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: { name: "assets/video/[name].[ext]", publicPath: "/" }
+          }
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|ico)/i,
@@ -115,6 +125,11 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
       chunks: ["index"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/mission/mission.html",
+      filename: "mission/index.html",
+      chunks: ["mission"]
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[contenthash].css",
