@@ -1,5 +1,6 @@
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
+@import "../../shared/scss/menu";
 
 main.content {
   color: #fff;
@@ -41,7 +42,7 @@ main.content {
     display: block;
     width: 100%;
     position: absolute;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     h3 {
       display: block;
