@@ -61,16 +61,18 @@ if (logo) {
   });
 }
 
-pageHead.addEventListener("mouseover", () => {
-  initialHeight = "60px";
-  initialWidth = "60px";
-  initialBg = "background: rgba(255,255,255,0.6)";
-});
-pageHead.addEventListener("mouseout", () => {
-  initialHeight = "30px";
-  initialWidth = "30px";
-  initialBg = "";
-});
+if (pageHead) {
+  pageHead.addEventListener("mouseover", () => {
+    initialHeight = "60px";
+    initialWidth = "60px";
+    initialBg = "background: rgba(255,255,255,0.6)";
+  });
+  pageHead.addEventListener("mouseout", () => {
+    initialHeight = "30px";
+    initialWidth = "30px";
+    initialBg = "";
+  });
+}
 
 document.addEventListener("mousemove", event => {
   cursor.setAttribute(
