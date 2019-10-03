@@ -23,9 +23,9 @@ main.content {
     }
   }
 
-  h1,
-  h3 {
+  h1 {
     position: absolute;
+    line-height: 1.5;
   }
 
   h1 {
@@ -36,9 +36,27 @@ main.content {
     }
   }
 
-  h3 {
+  .text-center {
     top: 55vh;
     display: block;
     width: 100%;
+    position: absolute;
+    word-wrap: break-word;
+
+    h3 {
+      display: block;
+      width: 100%;
+    }
+
+    button {
+      display: inline-block;
+      margin-top: 5vh;
+      padding: 5px;
+      pointer-events: auto;
+      cursor: none;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 }
