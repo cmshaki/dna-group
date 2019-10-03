@@ -13,19 +13,23 @@ main.content {
     top: 0;
     left: 0;
     text {
-      font: normal 3.5rem "Open Sans";
+      font: normal 2.7rem "Open Sans";
       fill: #fff;
       opacity: 0.3;
     }
   }
+
+  h1,
+  h3 {
+    position: absolute;
+    left: 6vw;
+  }
+
   h1 {
     top: 50vh;
-    left: 6vw;
-    position: absolute;
   }
-  p {
-    top: 65vh;
-    left: 6vw;
-    position: absolute;
+
+  h3 {
+    top: 70vh;
   }
 }
