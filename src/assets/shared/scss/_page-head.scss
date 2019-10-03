@@ -1,0 +1,10 @@
+main {
+  h1 {
+    pointer-events: auto;
+    cursor: none;
+
+    &:hover {
+      text-shadow: #fff 0 0 10px;
+    }
+  }
+}
