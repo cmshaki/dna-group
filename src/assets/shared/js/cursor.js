@@ -2,20 +2,21 @@ const cursor = document.querySelector(".cursor");
 const cursor2 = document.querySelector(".cursor2");
 const buttons = document.querySelectorAll("button");
 const menu = document.querySelector(".nav-menu");
+const logo = document.querySelector(".dna-logo");
 
 let initialHeight = "30px";
 let initialWidth = "30px";
 let initialBg = "";
 // Adding Event Listener for all buttons of a page
 buttons.forEach(item => {
-  item.addEventListener("mouseover", e => {
-    initialHeight = "60px !important";
-    initialWidth = "60px !important";
+  item.addEventListener("mouseover", () => {
+    initialHeight = "60px";
+    initialWidth = "60px";
     initialBg = "background: rgba(255,255,255,0.6)";
   });
-  item.addEventListener("mouseout", e => {
-    initialHeight = "60px !important";
-    initialWidth = "60px !important";
+  item.addEventListener("mouseout", () => {
+    initialHeight = "30px";
+    initialWidth = "30px";
     initialBg = "";
   });
 });
@@ -26,6 +27,17 @@ menu.addEventListener("mouseover", () => {
   initialBg = "background: rgba(255,255,255,0.6)";
 });
 menu.addEventListener("mouseout", () => {
+  initialHeight = "30px";
+  initialWidth = "30px";
+  initialBg = "";
+});
+
+logo.addEventListener("mouseover", () => {
+  initialHeight = "60px";
+  initialWidth = "60px";
+  initialBg = "background: rgba(255,255,255,0.6)";
+});
+logo.addEventListener("mouseout", () => {
   initialHeight = "30px";
   initialWidth = "30px";
   initialBg = "";

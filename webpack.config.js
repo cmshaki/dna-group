@@ -70,13 +70,15 @@ module.exports = {
             options: {
               limit: 10000,
               fallback: "file-loader",
-              name: "assets/img/[hash].svg",
+              name: "assets/svg/[name].svg",
               publicPath: "/"
             }
           },
           {
             loader: "img-loader",
             options: {
+              name: "assets/svg/[name].svg",
+              publicPath: "/",
               plugins: [
                 require("imagemin-svgo")({
                   plugins: [{ removeTitle: true }, { convertPathData: false }]
