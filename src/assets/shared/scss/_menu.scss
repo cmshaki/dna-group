@@ -2,8 +2,8 @@
   position: fixed;
   right: 3vw;
   z-index: 3;
-  top: 50%;
-  margin-top: -30px;
+  top: 48%;
+  margin: 0;
   height: 60px;
   width: 58px;
   padding: 20px;
@@ -16,8 +16,8 @@
   cursor: none;
 
   .line {
-    width: 1px;
-    height: 30px;
+    width: 30px;
+    height: 1px;
     background: #fff;
     display: block;
     position: absolute;
@@ -28,11 +28,11 @@
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
-    &:nth-child(2) {
-      margin-left: 8px;
-    }
     &:nth-child(3) {
-      margin-left: 16px;
+      margin-top: 8px;
+    }
+    &:nth-child(4) {
+      margin-top: 16px;
     }
   }
 
@@ -50,30 +50,21 @@
     -o-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    -webkit-transform: rotate(-90deg) translateX(-40px);
-    -moz-transform: rotate(-90deg) translateX(-40px);
-    -ms-transform: rotate(-90deg) translateX(-40px);
-    -o-transform: rotate(-90deg) translateX(-40px);
-    transform: rotate(-90deg) translateX(-40px);
   }
 
   &:hover {
     .line {
-      &:nth-child(1),
-      &:nth-child(3) {
-        height: 0;
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: 0;
       }
-      &:nth-child(2) {
-        height: 50px;
+      &:nth-child(3) {
+        width: 50px;
       }
     }
     span.text {
-      -webkit-transform: rotate(-90deg) translateX(-60px);
-      -moz-transform: rotate(-90deg) translateX(-60px);
-      -ms-transform: rotate(-90deg) translateX(-60px);
-      -o-transform: rotate(-90deg) translateX(-60px);
-      transform: rotate(-90deg) translateX(-60px);
       opacity: 1;
+      margin-top: 15px;
     }
   }
 }
