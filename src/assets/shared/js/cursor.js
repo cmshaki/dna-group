@@ -1,24 +1,36 @@
 const cursor = document.querySelector(".cursor");
 const cursor2 = document.querySelector(".cursor2");
 const buttons = document.querySelectorAll("button");
+const menu = document.querySelector(".nav-menu");
 
 let initialHeight = "30px";
 let initialWidth = "30px";
-
-// Adding Event Listener for all buttons on a page
-// This will make sure that
+let initialBg = "";
+// Adding Event Listener for all buttons of a page
 buttons.forEach(item => {
-  item.addEventListener("mouseover", () => {
-    initialHeight = "60px";
-    initialWidth = "60px";
+  item.addEventListener("mouseover", e => {
+    initialHeight = "60px !important";
+    initialWidth = "60px !important";
+    initialBg = "background: rgba(255,255,255,0.6)";
   });
-  item.addEventListener("mouseout", () => {
-    initialHeight = "30px";
-    initialWidth = "30px";
+  item.addEventListener("mouseout", e => {
+    initialHeight = "60px !important";
+    initialWidth = "60px !important";
+    initialBg = "";
   });
 });
 
-// The document mouse move
+menu.addEventListener("mouseover", () => {
+  initialHeight = "60px";
+  initialWidth = "60px";
+  initialBg = "background: rgba(255,255,255,0.6)";
+});
+menu.addEventListener("mouseout", () => {
+  initialHeight = "30px";
+  initialWidth = "30px";
+  initialBg = "";
+});
+
 document.addEventListener("mousemove", event => {
   cursor.setAttribute(
     "style",
@@ -29,6 +41,6 @@ document.addEventListener("mousemove", event => {
   cursor2.setAttribute(
     "style",
     `top: ${event.pageY - h / 2}px; left: ${event.pageX -
-      w / 2}px; height: ${initialHeight}; width: ${initialWidth}`
+      w / 2}px; height: ${initialHeight}; width: ${initialWidth}; ${initialBg}`
   );
 });
