@@ -3,10 +3,25 @@ const cursor2 = document.querySelector(".cursor2");
 const buttons = document.querySelectorAll("button");
 const menu = document.querySelector(".nav-menu");
 const logo = document.querySelector(".dna-logo");
+const modalMenuNav = document.querySelectorAll(".menu-modal ul li");
 
 let initialHeight = "30px";
 let initialWidth = "30px";
 let initialBg = "";
+
+modalMenuNav.forEach(item => {
+  item.addEventListener("mouseover", () => {
+    initialHeight = "60px";
+    initialWidth = "60px";
+    initialBg = "background: rgba(255,255,255,0.6)";
+  });
+  item.addEventListener("mouseout", () => {
+    initialHeight = "30px";
+    initialWidth = "30px";
+    initialBg = "";
+  });
+});
+
 // Adding Event Listener for all buttons of a page
 buttons.forEach(item => {
   item.addEventListener("mouseover", () => {

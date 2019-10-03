@@ -1,16 +1,12 @@
 .nav-menu {
   position: fixed;
   right: 3vw;
-  z-index: 3;
+  z-index: 110;
   top: 48%;
   margin: 0;
   height: 60px;
   width: 58px;
   padding: 20px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
   pointer-events: auto;
   cursor: none;
@@ -22,10 +18,6 @@
     display: block;
     position: absolute;
     top: 20px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
     &:nth-child(3) {
@@ -43,12 +35,8 @@
     font-size: 10px;
     letter-spacing: 2px;
     display: block;
-    color: white;
+    color: #fff;
     opacity: 0;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
 
@@ -65,6 +53,71 @@
     span.text {
       opacity: 1;
       margin-top: 15px;
+    }
+  }
+}
+
+.menu-modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(#000, 0.8);
+  transition: all 0.2s ease;
+
+  ul {
+    color: rgba(#fff, 0.3);
+    font-size: 50px;
+    list-style-type: none;
+    margin-top: 18vh;
+    margin-left: 15vw;
+
+    li {
+      margin-bottom: 10px;
+      .list-item-wrapper {
+        display: inline-block;
+        pointer-events: auto;
+        cursor: none;
+
+        &:hover {
+          color: white;
+          font-weight: bold;
+          text-shadow: #fff 0 0 10px;
+
+          div.line {
+            &::after {
+              background: #fff;
+              width: 20vw;
+            }
+          }
+        }
+
+        span {
+          font-size: 15px;
+          vertical-align: middle;
+        }
+
+        div.line {
+          display: inline-block;
+          vertical-align: middle;
+          transition: all 0.2s ease;
+          width: 20vw;
+          height: 1px;
+          background: rgba(#fff, 0.3);
+
+          &::after {
+            display: inline-block;
+            content: "";
+            height: 2px;
+            width: 0;
+            position: absolute;
+            background: #fff;
+            transition: all 0.2s ease;
+          }
+        }
+      }
     }
   }
 }

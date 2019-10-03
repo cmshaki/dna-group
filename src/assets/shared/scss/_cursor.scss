@@ -4,10 +4,11 @@
   width: 6px;
   height: 6px;
   background: red;
-  z-index: 100;
+  z-index: 150;
 }
 
 .cursor2 {
+  z-index: 140;
   position: absolute;
   border-radius: 50%;
   width: 30px;
