@@ -48,16 +48,18 @@ menu.addEventListener("mouseout", () => {
   initialBg = "";
 });
 
-logo.addEventListener("mouseover", () => {
-  initialHeight = "60px";
-  initialWidth = "60px";
-  initialBg = "background: rgba(255,255,255,0.6)";
-});
-logo.addEventListener("mouseout", () => {
-  initialHeight = "30px";
-  initialWidth = "30px";
-  initialBg = "";
-});
+if (logo) {
+  logo.addEventListener("mouseover", () => {
+    initialHeight = "60px";
+    initialWidth = "60px";
+    initialBg = "background: rgba(255,255,255,0.6)";
+  });
+  logo.addEventListener("mouseout", () => {
+    initialHeight = "30px";
+    initialWidth = "30px";
+    initialBg = "";
+  });
+}
 
 pageHead.addEventListener("mouseover", () => {
   initialHeight = "60px";
