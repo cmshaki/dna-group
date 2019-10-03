@@ -51,7 +51,7 @@ main.content {
     button {
       display: inline-block;
       margin-top: 3vh;
-      padding: 5px;
+      padding: 10px;
       pointer-events: auto;
       cursor: none;
       color: #fff;
@@ -60,7 +60,7 @@ main.content {
       border-radius: 5px;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.3);
       }
     }
   }
