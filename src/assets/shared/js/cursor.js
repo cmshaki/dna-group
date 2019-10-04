@@ -5,6 +5,7 @@ const menu = document.querySelector(".nav-menu");
 const logo = document.querySelector(".dna-logo");
 const modalMenuNav = document.querySelectorAll(".menu-modal ul li");
 const pageHead = document.querySelector("main h1");
+const homeLogo = document.querySelector("main svg.dna-home-logo");
 
 let initialHeight = "30px";
 let initialWidth = "30px";
@@ -55,6 +56,19 @@ if (logo) {
     initialBg = "background: rgba(255,255,255,0.6)";
   });
   logo.addEventListener("mouseout", () => {
+    initialHeight = "30px";
+    initialWidth = "30px";
+    initialBg = "";
+  });
+}
+
+if (homeLogo) {
+  homeLogo.addEventListener("mouseover", () => {
+    initialHeight = "60px";
+    initialWidth = "60px";
+    initialBg = "background: rgba(255,255,255,0.6)";
+  });
+  homeLogo.addEventListener("mouseout", () => {
     initialHeight = "30px";
     initialWidth = "30px";
     initialBg = "";

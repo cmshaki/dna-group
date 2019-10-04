@@ -9,7 +9,8 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    mission: "./src/mission/index.js"
+    lab: "./src/lab/index.js",
+    dna: "./src/dna/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -129,9 +130,14 @@ module.exports = {
       chunks: ["index"]
     }),
     new HtmlWebpackPlugin({
-      template: "src/mission/mission.html",
-      filename: "mission/index.html",
-      chunks: ["mission"]
+      template: "src/dna/dna.html",
+      filename: "dna/index.html",
+      chunks: ["dna"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/lab/lab.html",
+      filename: "lab/index.html",
+      chunks: ["lab"]
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[contenthash].css",

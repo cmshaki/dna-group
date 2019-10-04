@@ -4,53 +4,60 @@
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
 
+@keyframes fade-to-view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dna-home-logo {
+  animation: fade-to-view 2s ease-in 2s forwards;
+}
+
 .text-center {
   text-align: center;
 }
+
+html,
+body {
+  height: 110vh;
+}
+
+html {
+  overflow-y: visible;
+}
+
 main.content {
+  height: 110vh;
   color: #fff;
 
   #dna-bg-video {
+    opacity: 0;
+    animation: fade-to-view 2s ease-in 5s forwards;
     min-height: 100%;
     min-width: 100%;
   }
 
-  h1 {
-    position: absolute;
-    line-height: 1.5;
-    margin-left: 10vw;
-    top: 25vh;
-    span {
-      margin-left: 15vw;
-    }
+  div.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .text-center {
-    top: 55vh;
-    display: block;
-    width: 100%;
-    position: absolute;
-    overflow-wrap: break-word;
+  h4.lead-text {
+    display: inline-block !important;
+    position: fixed;
+    margin-left: 8vw;
 
-    h3 {
-      display: block;
-      width: 100%;
+    &:nth-child(2) {
+      //margin-top: -100vh;
     }
-
-    button {
-      display: inline-block;
-      margin-top: 3vh;
-      padding: 10px;
-      pointer-events: auto;
-      cursor: none;
-      color: #fff;
-      background: transparent;
-      border: 1px solid #fff;
-      border-radius: 5px;
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
+    &:nth-child(3) {
+      //margin: 0;
+      //margin-top: -100vh;
     }
   }
 }

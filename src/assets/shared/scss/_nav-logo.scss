@@ -9,12 +9,12 @@
 }
 
 .dna-home-logo {
-  display: block;
-  width: 100%;
-  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  position: fixed;
   background: transparent;
-  height: 30vh;
-  top: 40vh;
+  height: 26vh;
+  top: 37vh;
   pointer-events: auto;
   cursor: none;
 }
