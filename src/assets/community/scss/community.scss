@@ -86,3 +86,45 @@ main.content {
     }
   }
 }
+.social-media-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50vh;
+  left: 8vw;
+
+  a {
+    display: inline-flex;
+    pointer-events: auto;
+    cursor: none;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 3vh;
+    }
+
+    svg {
+      path {
+        fill: rgba(#fff, 0.2);
+      }
+      circle {
+        stroke: rgba(#fff, 0.2);
+        fill: none;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #fff;
+        }
+        circle {
+          stroke: #fff;
+        }
+      }
+    }
+
+    svg {
+      height: 8vh;
+    }
+  }
+}
