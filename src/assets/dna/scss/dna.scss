@@ -1,0 +1,67 @@
+@import "../../shared/scss/globals";
+@import "../../shared/scss/cursor";
+@import "../../shared/scss/menu";
+@import "../../shared/scss/nav-logo";
+@import "../../shared/scss/page-head";
+
+main.content {
+  color: #fff;
+  .text-center {
+    text-align: center;
+  }
+
+  #dna-bg-video {
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  svg.section-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text {
+      font: bold 2.7rem "Open Sans";
+      fill: #fff;
+      opacity: 0.1;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    line-height: 1.5;
+    margin-left: 10vw;
+    top: 25vh;
+    span {
+      margin-left: 15vw;
+    }
+  }
+
+  .text-center {
+    top: 55vh;
+    display: block;
+    width: 100%;
+    position: absolute;
+    overflow-wrap: break-word;
+
+    h3 {
+      display: block;
+      width: 100%;
+    }
+
+    button {
+      display: inline-block;
+      margin-top: 3vh;
+      padding: 10px;
+      pointer-events: auto;
+      cursor: none;
+      color: #fff;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 5px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

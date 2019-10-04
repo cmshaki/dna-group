@@ -1,4 +1,4 @@
-import "../assets/dna/scss/dna.scss";
+import "../assets/connect/scss/connect.scss";
 import "../assets/shared/js/cursor";
 import "../assets/shared/js/menu";
 

@@ -11,6 +11,7 @@ module.exports = {
     index: "./src/index.js",
     lab: "./src/lab/index.js",
     dna: "./src/dna/index.js",
+    connect: "./src/connect/index.js",
     community: "./src/community/index.js"
   },
   output: {
@@ -139,6 +140,11 @@ module.exports = {
       template: "src/lab/lab.html",
       filename: "lab/index.html",
       chunks: ["lab"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/connect/connect.html",
+      filename: "connect/index.html",
+      chunks: ["connect"]
     }),
     new HtmlWebpackPlugin({
       template: "src/community/community.html",
