@@ -10,7 +10,8 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     lab: "./src/lab/index.js",
-    dna: "./src/dna/index.js"
+    dna: "./src/dna/index.js",
+    community: "./src/community/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -138,6 +139,11 @@ module.exports = {
       template: "src/lab/lab.html",
       filename: "lab/index.html",
       chunks: ["lab"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/community/community.html",
+      filename: "community/index.html",
+      chunks: ["community"]
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[contenthash].css",

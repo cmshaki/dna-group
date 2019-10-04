@@ -3,6 +3,7 @@ const menuModal = document.querySelector(".menu-modal");
 const mainH1 = document.querySelectorAll("main h1");
 const mainDiv = document.querySelectorAll("main div");
 const mainSvg = document.querySelectorAll("main svg");
+const pageForms = document.querySelectorAll("main form");
 
 let clickCount = 1;
 menu.addEventListener("click", () => {
@@ -17,6 +18,9 @@ menu.addEventListener("click", () => {
     mainSvg.forEach(item => {
       item.setAttribute("style", "visibility: hidden; opacity: 0");
     });
+    pageForms.forEach(item => {
+      item.setAttribute("style", "visibility: hidden; opacity: 0");
+    });
   }
   if (clickCount % 2 == 0) {
     menuModal.setAttribute("style", "visibility: hidden; opacity: 0");
@@ -27,6 +31,9 @@ menu.addEventListener("click", () => {
       item.setAttribute("style", "visibility: visible; opacity: 1");
     });
     mainSvg.forEach(item => {
+      item.setAttribute("style", "visibility: visible; opacity: 1");
+    });
+    pageForms.forEach(item => {
       item.setAttribute("style", "visibility: visible; opacity: 1");
     });
   }
