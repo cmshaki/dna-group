@@ -68,7 +68,6 @@
   transition: all 0.2s ease;
 
   ul {
-    color: rgba(#fff, 0.3);
     font-size: 50px;
     list-style-type: none;
     margin-top: 18vh;
@@ -80,9 +79,11 @@
         display: inline-block;
         pointer-events: auto;
         cursor: none;
+        color: rgba(#fff, 0.3);
+        text-decoration: none;
 
         &:hover {
-          color: white;
+          color: #fff;
           font-weight: bold;
           text-shadow: #fff 0 0 10px;
 
