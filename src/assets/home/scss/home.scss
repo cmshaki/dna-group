@@ -1,10 +1,23 @@
+// Bootstrap Grid & Reboot Modules
+@import "../../shared/scss/bootstrap/functions";
+@import "../../shared/scss/bootstrap/variables";
+@import "../../shared/scss/bootstrap/mixins";
+@import "../../shared/scss/bootstrap/reboot";
+@import "../../shared/scss/bootstrap/grid";
+@import "../../shared/scss/bootstrap/type";
+@import "../../shared/scss/bootstrap/buttons";
+@import "../../shared/scss/bootstrap/utilities/display";
+@import "../../shared/scss/bootstrap/utilities/flex";
+@import "../../shared/scss/bootstrap/utilities/spacing";
+
+// Custom SCSS
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
 
-@keyframes fade-to-view {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -13,30 +26,37 @@
   }
 }
 
+@keyframes logo-animator {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0), scale(1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -20vh);
+  }
+}
+
 .dna-home-logo {
-  animation: fade-to-view 2s ease-in 2s forwards;
+  opacity: 0;
+  animation: logo-animator 2s ease-in 2s forwards;
 }
 
 .text-center {
   text-align: center;
 }
 
-html,
-body {
-  height: 110vh;
-}
-
-html {
-  overflow-y: visible;
-}
-
 main.content {
-  height: 110vh;
+  height: 100vh;
   color: #fff;
 
   #dna-bg-video {
     opacity: 0;
-    animation: fade-to-view 2s ease-in 5s forwards;
+    animation: fade-in 2s ease-in 4s forwards;
     min-height: 100%;
     min-width: 100%;
   }
@@ -47,17 +67,33 @@ main.content {
     align-items: center;
   }
 
-  h4.lead-text {
-    display: inline-block !important;
-    position: fixed;
-    margin-left: 8vw;
+  .text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 45vh;
 
-    &:nth-child(2) {
-      //margin-top: -100vh;
+    h4.lead {
+      opacity: 0;
+
+      &:nth-child(1) {
+        animation: fade-in 2s ease-in 5s forwards;
+      }
+
+      &:nth-child(2) {
+        animation: fade-in 2s ease-in 6s forwards;
+      }
     }
-    &:nth-child(3) {
-      //margin: 0;
-      //margin-top: -100vh;
-    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .text-container {
+    text-align: center;
+  }
+
+  .dna-home-logo {
+    height: 15vh;
   }
 }

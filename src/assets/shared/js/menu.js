@@ -10,6 +10,7 @@ let clickCount = 1;
 menu.addEventListener("click", () => {
   if (clickCount % 2 == 1) {
     menuModal.setAttribute("style", "visibility: visible; opacity: 1");
+    menuModal.setAttribute("style", "visibility: visible; opacity: 1");
     if (socialMediaSidebar) {
       socialMediaSidebar.setAttribute(
         "style",
