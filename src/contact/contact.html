@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DNA Group: CONNECT</title>
+    <title>DNA Group: Contact</title>
   </head>
   <body>
     <!-- Cursor Divs -->
@@ -335,10 +335,12 @@
     </svg>
     <!-- Menu bar-->
     <aside class="nav-menu" id="nav">
-      <span class="text">Menu</span> <span class="line"></span>
-      <span class="line"></span> <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="text">Menu</span>
     </aside>
-    <aside class="menu-modal">
+    <aside class="menu-modal pt-lg-7 pt-6">
       <ul>
         <li>
           <a href="/" class="list-item-wrapper">
@@ -348,31 +350,31 @@
           </a>
         </li>
         <li>
-          <a href="/dna" class="list-item-wrapper">
+          <a href="/dnagroup" class="list-item-wrapper">
             <span>02.</span>
             <div class="line"></div>
-            DNA
+            DNAGROUP
           </a>
         </li>
         <li>
-          <a href="/lab" class="list-item-wrapper">
+          <a href="/services" class="list-item-wrapper">
             <span>03.</span>
             <div class="line"></div>
-            LAB
+            SERVICES
           </a>
         </li>
         <li>
-          <a href="/connect" class="list-item-wrapper">
+          <a href="/contact" class="list-item-wrapper">
             <span>04.</span>
             <div class="line"></div>
-            CONNECT
+            CONTACT
           </a>
         </li>
         <li>
-          <a href="/community" class="list-item-wrapper">
+          <a href="/faq" class="list-item-wrapper">
             <span>05.</span>
             <div class="line"></div>
-            COMMUNITY
+            FAQ
           </a>
         </li>
         <li>
@@ -384,39 +386,89 @@
         </li>
       </ul>
     </aside>
+
     <!-- Page Content -->
     <main class="content">
-      <video autoplay muted loop id="dna-bg-video">
-        <source src="/assets/video/Contact_Video.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
-      <div class="text-center">
-        <h1>Are you ready for DNA?</h1>
-        <button>Evolve</button>
+      <div class="video-wrapper">
+        <video muted id="dna-bg-video">
+          <source src="/assets/video/Contact_Video.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
       </div>
       <div class="modal-form">
-        <h2>Schedule a consultation:</h2>
-        <form>
-          <div class="form-row">
-            <input type="text" class="first-name" />
-            <input type="text" class="last-name" />
+        <div class="container">
+          <h2 id="evolve">evolve</h2>
+          <div class="row">
+            <form class="col-lg-8">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      type="tel"
+                      id="phone"
+                      placeholder="phone"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="telegram"
+                      placeholder="telegram(opt)"
+                      name="telegram"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="company"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="website"
+                  placeholder="website(opt.)"
+                  name="website"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="mission"
+                  placeholder="your 10 word mission(opt.)"
+                  name="mission"
+                />
+              </div>
+              <div class="form-group">
+                <button class="btn" type="submit">
+                  I'm Ready
+                </button>
+                <p class="lead">You are heard, we will be in touch</p>
+              </div>
+            </form>
           </div>
-          <div class="form-row">
-            <input type="email" class="email" />
-            <input type="tel" class="phone" />
-          </div>
-          <div class="form-row">
-            <input type="text" class="company" />
-            <input type="text" class="website" />
-          </div>
-          <div class="form-row">
-            <textarea name="mission" id="" cols="30" rows="2"></textarea>
-          </div>
-          <div class="form-row">
-            <h2>You are heard, we will be in touch</h2>
-            <button type="submit">I'm Ready</button>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
     <hr />

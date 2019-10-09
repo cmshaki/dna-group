@@ -9,6 +9,11 @@ body {
   pointer-events: none;
 }
 
+button {
+  pointer-events: auto;
+  cursor: none;
+}
+
 @media screen and (min-width: 993px) {
   cursor: auto;
   pointer-events: auto;

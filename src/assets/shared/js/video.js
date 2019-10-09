@@ -1,3 +1,10 @@
-setTimeout(() => {
-  document.querySelector("video").play();
-}, 5000);
+const videoPause = time => {
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("video").play();
+    setTimeout(() => {
+      document.querySelector("video").pause();
+    }, time);
+  });
+};
+
+export default videoPause;

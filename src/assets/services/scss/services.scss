@@ -10,18 +10,13 @@
 @import "../../shared/scss/bootstrap/utilities/flex";
 @import "../../shared/scss/bootstrap/utilities/spacing";
 
-// Custom Bootstrap Styles
+// Custom SCSS
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
-
-html,
-body {
-  height: auto;
-  overflow-y: auto;
-}
+@import "../../shared/scss/animations";
 
 main.content {
   color: #fff;
@@ -30,46 +25,59 @@ main.content {
   }
 
   #dna-bg-video {
-    display: block;
-    z-index: 20;
-    margin-top: 14vh;
-    max-width: 66vw;
-    margin-left: 17vw;
-    border: 1px solid rgba(#fff, 0.3);
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  svg.section-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text {
+      font: bold 2.7rem "Open Sans";
+      fill: #fff;
+      opacity: 0.1;
+    }
+  }
+
+  .heading-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    line-height: 1.5;
+    padding-left: 10vw;
+    top: 25vh;
+    h1 {
+      display: inline-flex;
+      opacity: 0;
+      &:first-child {
+        animation: from-left 1s ease-in-out 1.5s forwards;
+      }
+      &:last-child {
+        margin-left: 15vw;
+        animation: from-left 1s ease-in-out 2.5s forwards;
+      }
+    }
   }
 
   .text-center {
-    margin-top: -25vh;
-    display: inline-block;
-    background: lighten(#000, 5%);
-    width: 60vw;
-    margin-left: 20vw;
+    top: 55vh;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
     overflow-wrap: break-word;
-    padding-bottom: 10vh;
+    animation: fade-in 1s ease-in-out 3.5s forwards;
 
-    h1 {
+    h3 {
       display: block;
       width: 100%;
     }
 
     button {
-      display: inline-block;
-      margin-top: 3vh;
-      padding: 10px;
-      pointer-events: auto;
-      cursor: none;
-      color: #fff;
-      background: transparent;
-      border: 1px solid #fff;
-      border-radius: 5px;
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
+      opacity: 0;
+      animation: flicker 0.5s ease-in-out 8.5s forwards;
     }
-  }
-  .modal-form {
-    width: 80vw;
-    margin-left: 10vw;
   }
 }

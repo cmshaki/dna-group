@@ -9,10 +9,10 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    lab: "./src/lab/index.js",
-    dna: "./src/dna/index.js",
-    connect: "./src/connect/index.js",
-    community: "./src/community/index.js"
+    services: "./src/services/index.js",
+    dnagroup: "./src/dnagroup/index.js",
+    contact: "./src/contact/index.js",
+    faq: "./src/faq/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -132,24 +132,24 @@ module.exports = {
       chunks: ["index"]
     }),
     new HtmlWebpackPlugin({
-      template: "src/dna/dna.html",
-      filename: "dna/index.html",
-      chunks: ["dna"]
+      template: "src/dnagroup/dnagroup.html",
+      filename: "dnagroup/index.html",
+      chunks: ["dnagroup"]
     }),
     new HtmlWebpackPlugin({
-      template: "src/lab/lab.html",
-      filename: "lab/index.html",
-      chunks: ["lab"]
+      template: "src/services/services.html",
+      filename: "services/index.html",
+      chunks: ["services"]
     }),
     new HtmlWebpackPlugin({
-      template: "src/connect/connect.html",
-      filename: "connect/index.html",
-      chunks: ["connect"]
+      template: "src/contact/contact.html",
+      filename: "contact/index.html",
+      chunks: ["contact"]
     }),
     new HtmlWebpackPlugin({
-      template: "src/community/community.html",
-      filename: "community/index.html",
-      chunks: ["community"]
+      template: "src/faq/faq.html",
+      filename: "faq/index.html",
+      chunks: ["faq"]
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[contenthash].css",

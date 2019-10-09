@@ -10,12 +10,13 @@
 @import "../../shared/scss/bootstrap/utilities/flex";
 @import "../../shared/scss/bootstrap/utilities/spacing";
 
-// Custom SCSS
+// Custom CSS
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
+@import "../../shared/scss/animations";
 
 main.content {
   color: #fff;
@@ -39,13 +40,25 @@ main.content {
     }
   }
 
-  h1 {
+  .heading-text {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    width: 100%;
     line-height: 1.5;
-    margin-left: 10vw;
+    padding-left: 10vw;
     top: 25vh;
-    span {
-      margin-left: 15vw;
+    h1 {
+      display: inline-flex;
+      opacity: 0;
+      &:first-child {
+        animation: from-left 1s ease-in-out 1.5s forwards;
+      }
+      &:last-child {
+        opacity: 0;
+        margin-left: 15vw;
+        animation: from-left 1s ease-in-out 2.5s forwards;
+      }
     }
   }
 
@@ -53,8 +66,10 @@ main.content {
     top: 55vh;
     display: block;
     width: 100%;
+    opacity: 0;
     position: absolute;
     overflow-wrap: break-word;
+    animation: fade-in 1s ease-in-out 3.5s forwards;
 
     h3 {
       display: block;
@@ -62,19 +77,8 @@ main.content {
     }
 
     button {
-      display: inline-block;
-      margin-top: 3vh;
-      padding: 10px;
-      pointer-events: auto;
-      cursor: none;
-      color: #fff;
-      background: transparent;
-      border: 1px solid #fff;
-      border-radius: 5px;
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
+      opacity: 0;
+      animation: flicker 0.5s ease-in-out 8.5s forwards;
     }
   }
 }

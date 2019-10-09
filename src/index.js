@@ -4,4 +4,6 @@ import "./assets/shared/js/menu";
 
 // Imports video to be used
 import "./assets/shared/video/Compressed_DNA_Bkrd.mp4";
-import "./assets/shared/js/video";
+import videoPause from "./assets/shared/js/video";
+
+videoPause(10000);
