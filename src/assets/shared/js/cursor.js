@@ -10,6 +10,9 @@ const homeLogo = document.querySelector("main svg.dna-home-logo");
 let initialHeight = "30px";
 let initialWidth = "30px";
 let initialBg = "";
+let timer;
+let w;
+let h;
 
 modalMenuNav.forEach(item => {
   item.addEventListener("mouseover", () => {
@@ -88,16 +91,20 @@ if (pageHead) {
   });
 }
 
-document.addEventListener("mousemove", event => {
+const mousemoveHandler = event => {
   cursor.setAttribute(
     "style",
     `top: ${event.pageY - 3}px; left: ${event.pageX - 3}px`
   );
-  const w = cursor2.getBoundingClientRect().width;
-  const h = cursor2.getBoundingClientRect().height;
+  w = cursor2.getBoundingClientRect().width;
+  h = cursor2.getBoundingClientRect().height;
   cursor2.setAttribute(
     "style",
     `top: ${event.pageY - h / 2}px; left: ${event.pageX -
       w / 2}px; height: ${initialHeight}; width: ${initialWidth}; ${initialBg}`
   );
+};
+
+document.addEventListener("mousemove", event => {
+  mousemoveHandler(event);
 });

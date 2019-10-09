@@ -1,8 +1,27 @@
+// Bootstrap Grid & Reboot Modules
+@import "../../shared/scss/bootstrap/functions";
+@import "../../shared/scss/bootstrap/variables";
+@import "../../shared/scss/bootstrap/mixins";
+@import "../../shared/scss/bootstrap/reboot";
+@import "../../shared/scss/bootstrap/grid";
+@import "../../shared/scss/bootstrap/type";
+@import "../../shared/scss/bootstrap/buttons";
+@import "../../shared/scss/bootstrap/utilities/display";
+@import "../../shared/scss/bootstrap/utilities/flex";
+@import "../../shared/scss/bootstrap/utilities/spacing";
+
+// Custom Bootstrap Styles
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
+
+html,
+body {
+  height: auto;
+  overflow-y: auto;
+}
 
 main.content {
   color: #fff;
@@ -11,39 +30,24 @@ main.content {
   }
 
   #dna-bg-video {
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  svg.section-head {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text {
-      font: bold 2.7rem "Open Sans";
-      fill: #fff;
-      opacity: 0.1;
-    }
-  }
-
-  h1 {
-    position: absolute;
-    line-height: 1.5;
-    margin-left: 10vw;
-    top: 25vh;
-    span {
-      margin-left: 15vw;
-    }
+    display: block;
+    z-index: 20;
+    margin-top: 14vh;
+    max-width: 66vw;
+    margin-left: 17vw;
+    border: 1px solid rgba(#fff, 0.3);
   }
 
   .text-center {
-    top: 55vh;
-    display: block;
-    width: 100%;
-    position: absolute;
+    margin-top: -25vh;
+    display: inline-block;
+    background: lighten(#000, 5%);
+    width: 60vw;
+    margin-left: 20vw;
     overflow-wrap: break-word;
+    padding-bottom: 10vh;
 
-    h3 {
+    h1 {
       display: block;
       width: 100%;
     }
@@ -63,5 +67,9 @@ main.content {
         background: rgba(255, 255, 255, 0.3);
       }
     }
+  }
+  .modal-form {
+    width: 80vw;
+    margin-left: 10vw;
   }
 }

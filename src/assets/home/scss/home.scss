@@ -1,3 +1,16 @@
+// Bootstrap Grid & Reboot Modules
+@import "../../shared/scss/bootstrap/functions";
+@import "../../shared/scss/bootstrap/variables";
+@import "../../shared/scss/bootstrap/mixins";
+@import "../../shared/scss/bootstrap/reboot";
+@import "../../shared/scss/bootstrap/grid";
+@import "../../shared/scss/bootstrap/type";
+@import "../../shared/scss/bootstrap/buttons";
+@import "../../shared/scss/bootstrap/utilities/display";
+@import "../../shared/scss/bootstrap/utilities/flex";
+@import "../../shared/scss/bootstrap/utilities/spacing";
+
+// Custom Bootstrap Styles
 @import "../../shared/scss/globals";
 @import "../../shared/scss/cursor";
 @import "../../shared/scss/menu";
@@ -23,15 +36,13 @@
 
 html,
 body {
-  height: 110vh;
-}
-
-html {
-  overflow-y: visible;
+  height: 200vh;
 }
 
 main.content {
-  height: 110vh;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
   color: #fff;
 
   #dna-bg-video {
@@ -45,6 +56,7 @@ main.content {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   h4.lead-text {

@@ -1,37 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
-
 html,
 body {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  box-sizing: border-box;
   height: 100vh;
-  overflow: hidden;
+  //overflow: hidden;
   background: #000;
   cursor: none;
-  font-size: 20px;
   pointer-events: none;
+  //-ms-overflow-style: none;
+  //scrollbar-width: none;
+  //&::-webkit-scrollbar {
+  //display: none;
+  //}
+  user-select: none;
 }
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button {
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-}
-
-h1 {
-  font-size: 50px;
-}
-h2 {
-  font-size: 40px;
-}
-h3 {
-  font-size: 30px;
-}
-
