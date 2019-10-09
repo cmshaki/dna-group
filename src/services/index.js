@@ -3,7 +3,15 @@ import "../assets/shared/js/cursor";
 import "../assets/shared/js/menu";
 
 // Imports video to be used
-import "../assets/shared/video/Lab_Background.mp4";
-import videoPause from "../assets/shared/js/video";
+import "../assets/shared/video/Services_Compressed.mp4";
 
-videoPause(16000);
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("video").playbackRate = 1.5;
+  document.querySelector("video").play();
+  window.setTimeout(() => {
+    document.querySelector("video").playbackRate = 1;
+  }, 7000);
+  window.setTimeout(() => {
+    document.querySelector("video").pause();
+  }, 11000);
+});
