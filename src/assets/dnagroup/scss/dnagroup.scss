@@ -17,6 +17,7 @@
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
 @import "../../shared/scss/animations";
+@import "../../shared/scss/overlay";
 
 main.content {
   color: #fff;
@@ -55,7 +56,6 @@ main.content {
         animation: from-left 1s ease-in-out 1.5s forwards;
       }
       &:last-child {
-        opacity: 0;
         margin-left: 15vw;
         animation: from-left 1s ease-in-out 2.5s forwards;
       }

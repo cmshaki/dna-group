@@ -16,6 +16,7 @@
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
+@import "../../shared/scss/animations";
 @import "../../shared/scss/overlay";
 
 main.content {
@@ -25,8 +26,8 @@ main.content {
   }
 
   #dna-bg-video {
-    min-height: 100%;
-    min-width: 100%;
+    min-height: 100vh;
+    min-width: 117vw;
   }
 
   svg.section-head {
@@ -40,62 +41,51 @@ main.content {
     }
   }
 
-  h1 {
+  .heading-text {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    width: 100%;
     line-height: 1.5;
-    margin-left: 10vw;
+    padding-left: 10vw;
     top: 25vh;
-    span {
-      margin-left: 15vw;
+    h1 {
+      display: inline-flex;
+      opacity: 0;
+      &:first-child {
+        animation: from-left 1s ease-in-out 1.5s forwards;
+      }
+      &:last-child {
+        margin-left: 15vw;
+        animation: from-left 1s ease-in-out 2.5s forwards;
+      }
     }
   }
 
-  form {
-    top: 60vh;
-    display: flex;
-    width: 100%;
+  .form-container {
     position: absolute;
-    overflow-wrap: break-word;
-    align-items: center;
-    justify-content: center;
+    top: 60vh;
+    width: 100%;
 
-    .form-wrapper {
+    form {
+      width: 100%;
       input {
-        display: inline-flex;
-        width: 50vw;
-        padding-bottom: 10px;
-        font-size: 20px;
-        color: #fff;
-        background: transparent;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 1px solid #fff;
-        vertical-align: bottom;
         pointer-events: auto;
         cursor: none;
-
+        color: #fff;
+        width: 100%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
         &::placeholder {
-          color: rgba(#fff, 0.3);
+          color: rgba(#fff, 0.5);
         }
       }
-
       button {
-        display: inline-flex;
-        align-self: right;
-        align-content: right;
-        margin-top: 3vh;
-        padding: 10px;
-        pointer-events: auto;
-        cursor: none;
-        color: #fff;
-        background: transparent;
-        border: 1px solid #fff;
-        border-radius: 5px;
-
-        &:hover {
-          background: rgba(255, 255, 255, 0.3);
-        }
+        opacity: 0;
+        animation: flicker 0.5s ease-in-out 3s forwards;
       }
     }
   }
@@ -103,9 +93,9 @@ main.content {
 
 .social-media-sidebar {
   display: flex;
-  flex-direction: column;
+  flex-direction: horizontal;
   position: fixed;
-  top: 50vh;
+  top: 40vh;
   left: 8vw;
 
   a {
@@ -121,6 +111,9 @@ main.content {
     svg {
       path {
         fill: rgba(#fff, 0.2);
+      }
+      &:first-child {
+        margin-right: 2vw;
       }
       circle {
         stroke: rgba(#fff, 0.2);
@@ -142,5 +135,11 @@ main.content {
     svg {
       height: 8vh;
     }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .form-container {
+    padding: 0 5vw;
   }
 }

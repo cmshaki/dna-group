@@ -4,7 +4,8 @@ const buttons = document.querySelectorAll("button");
 const menu = document.querySelector(".nav-menu");
 const logo = document.querySelector(".dna-logo");
 const modalMenuNav = document.querySelectorAll(".menu-modal ul li");
-const pageHead = document.querySelector("main h1");
+const pageHeads = document.querySelectorAll("main h1");
+const formInputs = document.querySelectorAll("form input");
 const homeLogo = document.querySelector("main svg.dna-home-logo");
 
 let initialHeight = "30px";
@@ -78,16 +79,33 @@ const runUniqueCursor = () => {
       });
     }
 
-    if (pageHead) {
-      pageHead.addEventListener("mouseover", () => {
-        initialHeight = "60px";
-        initialWidth = "60px";
-        initialBg = "background: rgba(255,255,255,0.6)";
+    if (pageHeads) {
+      pageHeads.forEach(item => {
+        item.addEventListener("mouseover", () => {
+          initialHeight = "60px";
+          initialWidth = "60px";
+          initialBg = "background: rgba(255,255,255,0.6)";
+        });
+        item.addEventListener("mouseout", () => {
+          initialHeight = "30px";
+          initialWidth = "30px";
+          initialBg = "";
+        });
       });
-      pageHead.addEventListener("mouseout", () => {
-        initialHeight = "30px";
-        initialWidth = "30px";
-        initialBg = "";
+    }
+
+    if (formInputs) {
+      formInputs.forEach(item => {
+        item.addEventListener("mouseover", () => {
+          initialHeight = "60px";
+          initialWidth = "60px";
+          initialBg = "background: rgba(255,255,255,0.6)";
+        });
+        item.addEventListener("mouseout", () => {
+          initialHeight = "30px";
+          initialWidth = "30px";
+          initialBg = "";
+        });
       });
     }
 

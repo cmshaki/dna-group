@@ -4,6 +4,17 @@ import "../assets/shared/js/menu";
 
 // Imports video to be used
 import "../assets/shared/video/DNAgroup_Compressed.mp4";
-import videoPause from "../assets/shared/js/video";
 
-videoPause(10000);
+const overlay = document.querySelector(".overlay");
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("video").play();
+
+  window.setTimeout(() => {
+    overlay.setAttribute("style", "background: rgba(0,0,0, 0.5)");
+  }, 1500);
+
+  window.setTimeout(() => {
+    document.querySelector("video").pause();
+  }, 14000);
+});

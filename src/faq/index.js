@@ -11,10 +11,12 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("video").playbackRate = 1.5;
   document.querySelector("video").play();
   window.setTimeout(() => {
+    overlay.setAttribute("style", "background: rgba(0,0,0, 0.5)");
+  }, 1500);
+  window.setTimeout(() => {
     document.querySelector("video").playbackRate = 1;
   }, 4000);
   window.setTimeout(() => {
-    overlay.setAttribute("style", "background: rgba(0,0,0, 0.5)");
     document.querySelector("video").pause();
   }, 5000);
 });
