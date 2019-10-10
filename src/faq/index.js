@@ -5,6 +5,8 @@ import "../assets/shared/js/menu";
 // Imports video to be used
 import "../assets/shared/video/FAQ_Compressed.mp4";
 
+const overlay = document.querySelector(".overlay");
+
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("video").playbackRate = 1.5;
   document.querySelector("video").play();
@@ -12,6 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector("video").playbackRate = 1;
   }, 4000);
   window.setTimeout(() => {
+    overlay.setAttribute("style", "background: rgba(0,0,0, 0.5)");
     document.querySelector("video").pause();
   }, 5000);
 });

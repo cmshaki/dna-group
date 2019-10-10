@@ -4,6 +4,10 @@ import "./assets/shared/js/menu";
 
 // Imports video to be used
 import "./assets/shared/video/DNA_Home_Compressed.mp4";
-import videoPause from "./assets/shared/js/video";
 
-videoPause(10000);
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("video").play();
+  window.setTimeout(() => {
+    document.querySelector("video").pause();
+  }, 14000);
+});

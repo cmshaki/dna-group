@@ -31,19 +31,17 @@
     opacity: 0;
     transform: scale(0.5, 0.5);
   }
-  50% {
+  30% {
     opacity: 1;
-    transform: translate(0, 0), scale(1, 1);
+    transform: scale(1, 1);
   }
   100% {
     opacity: 1;
-    transform: translate(0, -20vh);
+    position: absolute;
+    margin-top: -20vh;
+    margin-right: auto;
+    margin-left: 0;
   }
-}
-
-.dna-home-logo {
-  opacity: 0;
-  animation: logo-animator 2s ease-in 2s forwards;
 }
 
 .text-center {
@@ -61,18 +59,37 @@ main.content {
     min-width: 100%;
   }
 
+  .overlay {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    transition: all ease-in 0.2s;
+  }
+
   div.logo-wrapper {
+    top: 0;
+    left: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    svg.dna-home-logo {
+      top: 50vh;
+      opacity: 0;
+      animation: logo-animator 2s ease-in 2s forwards;
+      display: inline-flex;
+      width: 40%;
+      margin: 0 30%;
+    }
   }
 
   .text-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100vh;
     width: 100%;
-    padding-top: 45vh;
+    padding-top: 60vh;
 
     h4.lead {
       opacity: 0;
@@ -89,11 +106,19 @@ main.content {
 }
 
 @media screen and (max-width: 575px) {
-  .text-container {
-    text-align: center;
-  }
+  //.text-container {
+  //text-align: center;
+  //}
 
-  .dna-home-logo {
-    height: 15vh;
+  main.content {
+    div.logo-wrapper {
+      svg.dna-home-logo {
+        width: 80vw;
+        margin: 0 10vw;
+      }
+      h4.lead {
+        font-size: 1.2rem;
+      }
+    }
   }
 }

@@ -54,6 +54,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
+    "dev-build": "webpack",
     "watch": "webpack --mode development --open",
     "develop": "webpack-dev-server --mode development --open",
     "preserved": "cls"

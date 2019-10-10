@@ -16,6 +16,7 @@
 @import "../../shared/scss/menu";
 @import "../../shared/scss/nav-logo";
 @import "../../shared/scss/page-head";
+@import "../../shared/scss/overlay";
 
 main.content {
   color: #fff;
@@ -99,6 +100,7 @@ main.content {
     }
   }
 }
+
 .social-media-sidebar {
   display: flex;
   flex-direction: column;
@@ -125,6 +127,7 @@ main.content {
         fill: none;
       }
     }
+
     &:hover {
       svg {
         path {
